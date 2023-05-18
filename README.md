@@ -25,7 +25,11 @@ Go to the project directory
 
 ## Authores
 
-- [@manuelperezg](https://www.github.com/manuelperezg)
+- [@CristopherBy](https://www.github.com/CristopherBy)
+- [@Uriel025](https://www.github.com/Uriel025)
 - [@Ricagoba25](https://www.github.com/Ricagoba25)
+- [@JanethHdez1](https://www.github.com/JanethHdez1)
+- [@jatziryjhh](https://www.github.com/jatziryjhh)
+
 
 

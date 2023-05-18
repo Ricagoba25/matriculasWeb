@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GOD OF WAR</title>
+    <h1><center><i> <strong> GOD OF WAR RAGNAROK </strong> </i> </center></h1>
+
+</head>
+<style>
+
+html{
+     background-color: #2B4270
+
+    }
+
+    
+
+    body{
+        background-color: #3B807B
+
+    }
+
+</style>
+<body>
+    <!--   Cambiar Fondo    -->
+    <div>
+        <p> <strong> <i> Cambiar fondo</i></strong></p>
+        
+        <button onclick="cambiarFondo1()"> <strong> Cambiar Fondo</strong></button>
+        <button onclick="cambiarFondo2()"> <strong> Regresar Fondo </strong></button>
+   
+    <script>
+        function cambiarFondo1() {
+  document.body.style.backgroundColor =  "#185A3F";
+       }
+        function cambiarFondo2() {
+  document.body.style.backgroundColor =  "#3B807B";
+       }
+
+    </script>
+</div>
+
+
+<!--   Cambiar texto    -->
+<div>
+    <p id="texto"> Año de publicacion: 2022</p>
+    <p id="texto2">Productor: SIE Santa Monica Studio </p>
+    <button onclick="cambiarTexto()">Cambiar texto</button>
+
+</div>
+
+<script>
+    function cambiarTexto() {
+        document.getElementById("texto").innerHTML = "<strong><h2>  Año de publicacion: 2022</h2></strong>";
+        document.getElementById("texto2").innerHTML = "<strong><h2>Productor: SIE Santa Monica Studio</h2></strong>";
+        
+    }
+</script>
+
+
+<!--   Cambiar Imagen    -->
+<div>
+   <center> <img id="imagen1" src="God1.gif" alt="imagen1" width="420px">
+    <br>
+    <button onclick="cambiarImagen1()">Cambiar Imagen</button>
+    <button onclick="cambiarImagen2()">Regresar al Anterior Imagen</button>
+</center>
+</div>
+
+<script>
+    function cambiarImagen1() {
+        document.getElementById("imagen1").src = "God2.gif";
+        
+    }
+
+function cambiarImagen2() {
+    document.getElementById("imagen1").src = "God1.gif";
+}
+
+</script>
+
+
+<!--   Esconder texto    -->
+<div>
+    <h2 id="mensaje">Hola mundo</h2>
+  <button onclick="ocultarMensaje()">Ocultar mensaje</button>
+
+</div>
+
+<script>
+    function ocultarMensaje() {
+document.getElementById("mensaje").innerHTML = "";
+ 
+    }
+</script>
+<br><br>
+
+<!--   Generar un Texto    -->
+<div id="miDiv"></div>
+    
+  <button onclick="escribirTexto()">Generar texto</button>
+
+
+  <script>
+ function escribirTexto(){
+  
+  document.getElementById("miDiv").innerHTML = "<h1>Este texto no lo escribió Uriel, lo escribió JavaScript</h1>";
+  
+
+
+ }
+ 
+ </script>
+
+
+
+    <P><strong><i> Año de publicacion: 2022</i></strong></P>
+<p><Strong><i> Productor: SIE Santa Monica Studio</i></Strong></p>
+<p><i><strong>
+    Reseña:GOD OF WAR RAGNAROK MARCA CONSIGO UNA SOLIDA Y EMOCIONANTE HISTORIA DE PRINCIPIO A FIN. CON UNA CONTINUACIÓN 
+    ESTUPENDA, EN ESTA ENTREGA,MEJORA LAS IMPACTANTES LUCHAS,AÑADIÉNDOLE DIVERAS FUNCIONES CARACTERÍSTICAS DE LA VIOLENCIA CLÁSICA DE 
+    LOS JUEGOS ANTERIORES, AGREGANDO ADEMÁS BATALLAS ÉPICAS Y MUY BIEN ELABORADAS, QUE NOS HARÁN PASAR U BUEN RATO PROPORCIONÁNDOOS 
+    RETOS A MEDIDA QUE SEAMOS MÁS EXIGENTES EN EL COMBATE. LOS ENFRENTAMIENTOS CON JEFES, ALGO POCO VISTO EN SU JUEGO ANTERIOR,ADEMÁS,
+    LOS GRANDES JEFES COMO THOR, ODÍN Y OTROS ADVERSARIOS QUE NO SE LLEGARON A PRESENTAR EN SU MOMENTO, TIENEN LOS MEJORES MOVIMIENTOS
+    EN CUANTO A DESAFÍO Y EXIGENCIA DEL JUGADOR PARA PONER A PRUEBA.LA HISTORIA PRINCIPAL, ENORGULLECE LA SAGA NÓRDICA, EN MOMENTOS,
+    SU DESVIÓ AL CAMBIAR DE PERSONAJE JUGABLE PUEDE PARECER UN TANTO EXTRAÑO, EN CUANTO A LA EVOLUCIÓN Y RELACIÓN DE KRATOS CON SU HIJO
+    , HACIÉNDOLO MÁS HUMANO Y MARCANDO MUCHOS SENTIMIENTOS OCULTOS QUE SE LOGRAN APRECIAR EN PEQUEÑOS DETALLES, TENIENDO ASÍ UN 
+    DESENLACE TAN GRATIFICANTE COMO DIGNO DE UN HOMBRE QUE HA APRENDIDO DE SUS ERRORES.
+</strong></i></p>
+<center><p><i><strong>Calificación: </strong></i></p></center>
+<center><img src="cali.png"alt="Calificacion Aqui"></center> 
+
+</body>
