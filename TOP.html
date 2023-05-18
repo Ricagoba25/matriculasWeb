@@ -1,11 +1,18 @@
 <!doctype html>
  <html>
-     <head> 
-        <meta charset="utf-8"/> 
-        <title>Twenty One Pilots </title>
-     </head> 
-     <style> body{ background-color: blueviolet; }
-      </style> 
+   <head>
+      <link rel="stylesheet" type="text/css">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>20223TN045</title>
+ <style>
+      .hidden{
+          display:none;
+      }
+ 
+ </style>
+  </head>
       <body> 
         <header> 
             <center><h1> <p> Twenty One Pilots</p> </h1> </center>
@@ -16,6 +23,57 @@
                  y Regional At Best (2011), antes de ser firmada por el sello discográfico Fueled by Ramen en 2012. Su debut en el sello, Vessel, fue lanzado en 2013.
                   El dúo logró un éxito revolucionario con su cuarto álbum,
                    Blurryface </p> </center>
+
+                   <button onclick="changeBackground()">Cambiar color o imagen de fondo</button>
+    
+                   <p id="texto">Texto original</p>
+                   <button onclick="changeText()">Cambiar texto</button>
+                   
+                   <img id="imagen1" src="../matriculasWeb/assets/imagenes/image.jpg" alt="AKI HABIA UNA IMAGEN">
+                   <button onclick="changeImage('imagen2')">Cambiar imagen</button>
+                   <button onclick="resetImage()">Restaurar imagen</button>
+                   
+                   <h2 id="mensaje">Hola mundo</h2>
+                   <button onclick="hideMessage()">Ocultar mensaje</button>
+                   
+                   <div id="miDiv"></div>
+                   <button onclick="writeText()">Escribir en el div</button>
+                   
+                   <script>
+                      
+                       function changeBackground() {
+                           document.body.style.backgroundColor = "Red";
+                          
+                       }
+                       
+                       
+                       function changeText() {
+                           document.getElementById("texto").textContent = "Nuevo texto";
+                       }
+                       
+                      
+                       function changeImage(newSrc) {
+                           document.getElementById("imagen").src = newSrc;
+                       }
+                       
+                      
+                       function resetImage() {
+                           document.getElementById("imagen").src = "imagen1.jpg";
+                       }
+                       
+                      
+                       function hideMessage() {
+                           document.getElementById("mensaje").style.display = "none";
+                       }
+                       
+                       
+                       function writeText() {
+                           document.getElementById("miDiv").innerHTML = "<h1>Este texto no lo escribió Christopher , lo escribió JavaScript</h1>";
+                       }
+                   </script>
+                   
+               </body>
+               </html>
                 
                 </header>    
-                </body>
+               
