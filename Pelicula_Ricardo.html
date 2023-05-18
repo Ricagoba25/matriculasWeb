@@ -1,34 +1,115 @@
 <html>
 
 <head>
-<p> <h1>Mi Pelicula Favorita</h1></p>
-<br>
+    <p>
+    <h1 id="titulo">Mi Pelicula Favorita</h1>
+    </p>
+    <br>
+    <script src="funciones.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #miDiv{
+            display: none;
+        }    
+    </style>
 </head>
 
 <body>
-<br>
-<P> <strong>Nombre</strong> Interestelar </P>
-<br>
-<p><strong> Año de Estreno: </strong> 2014</p>
-<br>
-<p> <strong>Productor: </strong> Emma Thomas, Christopher Nolan, Lynda Obst</p>
-<br>
-<img src="./assets/imagenes/interestelar.jpg" style="width: 20%;" height="55%">
-<br>
-<a href="https://www.google.com/search?q=interestelar&rlz=1C1UEAD_esMX1003MX1003&sxsrf=APwXEdfxJRuAPdlJi0BYF0lyq2-vjcy1fw:1683655345630&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjvp7P26Oj-AhUFLEQIHdskCQcQ_AUoAXoECAEQAw&biw=1536&bih=722&dpr=1.25">Más Imagenes</a>
-<br>
-<P> <strong>Reseña:</strong></P>
-<p style="width: 70%;">¡¡Calificación máxima de mi parte!! esta película es espectacular, no te la tienes que perder, 
-    dura casi 3 horas, ¡¡pero 3 horas que valen la maldita pena!! la recomiendo mucho, me encantó, 
-    una de las mejores películas que he visto en mi vida, muy realista y futurista, una de mis favoritas. 
-    Si te gusta la ciencia, la tecnología, el buen sentimentalismo, lo increíble e inimaginable, pues ésta es tu película, 
-    un tiro al piso. Te recomiendo que la veas con un buen sonido, sin interrupciones, para garantizar el disfrute de la misma, 
-    si tienes auriculares grandes, úsalos, prepara las palomitas de maíz o los postres que desees, y dedícate a contemplar,
-     tratar de entender continuamente y disfrutar. Verla con el idioma original o doblada al español no supone mucha diferencia 
-     en este caso, pues el doblaje fue extremadamente bueno. ¡Like! me fascinó esta película.</p>
-<br>
-<p> <strong> Calificación: </strong> </p>
-<img src="./../matriculasWeb/assets/imagenes/5 stars.svg" width="80">
+
+    <button type="button" onclick="cambiarti()">
+        Cambiar titulo
+    </button>
+    <button type="button" onclick="regresarti()">
+        Regresar Titulo
+    </button>
+    <br>
+    <br>
+    <br>
+
+    <h2 id="mundo">HOLA MUNDO</h2>
+    <button type="button" onclick="ocultar()">
+        Quitar Hola Mundo
+    </button>
+    <button type="button" onclick="mostrar()">
+        Mostrar Hola Mundo
+    </button>
+    <br>
+    <br>
+    <P> <strong>Nombre: </strong> Interestelar </P>
+    <br>
+    <p><strong> Año de Estreno: </strong> 2014</p>
+    <br>
+    <p> <strong>Productor: </strong> Emma Thomas, Christopher Nolan, Lynda Obst</p>
+    <br>
+
+    <p><strong> Cambiar Fondo</strong></p>
+    <button type="button" onclick="fondo1()">
+        Cambiar
+    </button>
+    <button type="button" onclick="fondo2()">
+        Regresar
+    </button>
+    <br>
+    <br>
+
+
+    <img src="./assets/imagenes/interestelar.jpg" id="interestelar" width="20%" height="55%">
+    <br>
+    <br>
+    <p><strong> Cambiar Imagen</strong></p>
+    <button type="button" onclick="Cambiar()">
+        Cambiar
+    </button>
+    <button type="button" onclick="Regresar()">
+        Regresar
+    </button>
+    <br>
+    <br>
+    <a
+        href="https://www.google.com/search?q=interestelar&rlz=1C1UEAD_esMX1003MX1003&sxsrf=APwXEdfxJRuAPdlJi0BYF0lyq2-vjcy1fw:1683655345630&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjvp7P26Oj-AhUFLEQIHdskCQcQ_AUoAXoECAEQAw&biw=1536&bih=722&dpr=1.25">Más
+        Imagenes</a>
+    <br>
+    <P> <strong>Reseña:</strong></P>
+    <p style="width: 70%;">¡¡Calificación máxima de mi parte!! esta película es espectacular, no te la tienes que
+        perder,
+        dura casi 3 horas, ¡¡pero 3 horas que valen la maldita pena!! la recomiendo mucho, me encantó,
+        una de las mejores películas que he visto en mi vida, muy realista y futurista, una de mis favoritas.
+        Si te gusta la ciencia, la tecnología, el buen sentimentalismo, lo increíble e inimaginable, pues ésta es tu
+        película,
+        un tiro al piso. Te recomiendo que la veas con un buen sonido, sin interrupciones, para garantizar el disfrute
+        de la misma,
+        si tienes auriculares grandes, úsalos, prepara las palomitas de maíz o los postres que desees, y dedícate a
+        contemplar,
+        tratar de entender continuamente y disfrutar. Verla con el idioma original o doblada al español no supone mucha
+        diferencia
+        en este caso, pues el doblaje fue extremadamente bueno. ¡Like! me fascinó esta película.</p>
+    <br>
+    <p> <strong> Calificación: </strong> </p>
+    <img src="./../matriculasWeb/assets/imagenes/5 stars.svg" width="80">
+    <br>
+    <br>
+
+    
+    <div id ="miDiv">    
+        <h1> Este texto no lo escribio Ricardo Gonzalez, lo escribió JavaScript</h1>
+    </div>
+    <button type="button" onclick="mostrardi()">
+        Mostrar texto de Java
+    </button>
+    <button type="button" onclick="ocultardi()">
+        Ocultar texto de Java
+    </button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 </body>
 
 
