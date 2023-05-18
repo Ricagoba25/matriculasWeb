@@ -1,31 +1,20 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="../matriculas/estilos.css">
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
 		<title>20223TN062</title>
-	</head>
 	<style>
-		html{
-			background-color:#FBD1FE;
-		}
-		body{
-			background-color:#F08080;
-			color:#000000;
-			margin:auto;
-			
-		}
-		#contenedor{
-			margin:auto;
-			
-		}
-		header{
-			float:center;
-			background-color:#FFA07A;
-		}
+        .hidden{
+            display:none;
+        }
 	
 	</style>
+    </head>
 	<body>
-		 <div id="contenedor">
+            <center><button onclick="cambiarColor()">Cambiar de Color</button></center>
 		<header>
 				<p align="center">
 						<p align="center">
@@ -35,31 +24,88 @@
 		
 				
 		</header>
-				<nav>
-					<h1 align="center"><strong>"JOVANNA JATZIRY HERRERA HERNÁNDEZ"</strong></h1>
-					<center><img src="../imagenes/marie.gif" align="center"></center>
+        <div>            
+             <h1 id="boton0">
+                "JOVANNA JATZIRY HERRERA HERNÁNDEZ"</strong></h1>
+             </h1> 
+             <center><img src="../imagenes/marie.gif" align="center"></center>
+                <br>
+                <center><button onclick="cambiarTexto()">Cambiar TEXTO</button></center>
 				</nav>
-				<p>
-						<h4 align="left"><li>CARRERA:</li></H4>
-						<h3 align="center"><dd><p>DESARROLLO DE SOFTWARE MULTIPLATAFORMA</p></dd></h3>
-						<h4 align="left"><li>GRUPO:</li></h4>
-						<h3 align="center"><dd><p>3 ° "B" </p></dd></h3>
-						<h4 align="left"><li>ESTUDIOS:</li></h4>
-						<h3 align="center"><dd><p>FISICOMATEMATICO</p></dd></h3>
-						<h3 align="center"><dd><p>TECNICO EN PROGRAMACIÓN</p></dd></h3>
-						<center><img src="../imagenes/pooh.gif" align="center"></center>
-						<h4 align="left"><li>PASATIEMPOS</li></h4>
-						<h3 align="center"><dd><p>ESCUCHAR MUSICA</p></dd></h3>
-						<h3 align="center"><dd><p>VER DISNEY</p></dd></h3>
-						<h3 align="center"><dd><p>COMER TAKIS</p></dd></h3>
-						<h3 align="center"><dd><p>VER DISNEY</p></dd></h3>
-						<h3 align="center"><dd><p>ESCUCHAR MORAT</p></dd></h3>
-						<center><img src="../imagenes/morat.png" align="center"></center>
-						<h4 align="left"><li>CORREO INSTITUCIONAL:</li></h4>
-						<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new" target="blank"><h3 align="center"><dd><p>20223tn062@utez.edu.mx</p></dd></h3>
-							</UL>
-						</h4>
-					</p>
-		</div>
-	</body>
-</html>
+        </div>
+        <br>
+        <br>
+        <center><button id="boton1">IMAGEN1</button></center>
+       <center><button id="boton2">IMAGEN2</button></center>
+        <center><img id=imagen1" src="../imagenes/marie.gif" alt="Imagen1" align="center"></center>
+        
+        <div id="miDiv">
+            <h1 id="boton3">
+               <center><button onclick="generarTexto()">Generar Texto</button></center> 
+            </h1>
+        </div>
+        <div>
+            <h2 id="HolaM">HOLA MUNDO</h2>
+           <center><button onclick="ocultar()">Ocultar Hola Mundo</button></center> 
+        </div><p>
+            <h4 align="left"><li>CARRERA:</li></H4></p>
+            <h3 align="center"><dd><p>DESARROLLO DE SOFTWARE MULTIPLATAFORMA</p></dd></h3>
+            <h4 align="left"><li>GRUPO:</li></h4>
+            <h3 align="center"><dd><p>3 ° "B" </p></dd></h3>
+            <h4 align="left"><li>ESTUDIOS:</li></h4>
+            <h3 align="center"><dd><p>FISICOMATEMATICO</p></dd></h3>
+            <h3 align="center"><dd><p>TECNICO EN PROGRAMACIÓN</p></dd></h3>
+            <center><img src="../imagenes/pooh.gif" align="center"></center>
+            <h4 align="left"><li>PASATIEMPOS</li></h4>
+            <h3 align="center"><dd><p>ESCUCHAR MUSICA</p></dd></h3>
+            <h3 align="center"><dd><p>VER DISNEY</p></dd></h3>
+            <h3 align="center"><dd><p>COMER TAKIS</p></dd></h3>
+            <h3 align="center"><dd><p>VER DISNEY</p></dd></h3>
+            <p id="texto"><h3 align="center"><dd><p>ESCUCHAR MORAT</p></dd></h3></p>
+            <center><img id ="imagen" src="../imagenes/morat.png" alt="aqui ta morat"align="center"></center>
+            <h4 align="left"><li>CORREO INSTITUCIONAL: 20223tn062@utez.edu.mx </li></h4>
+            
+                </UL>
+            </h4>
+        </p>
+        
+        <script>
+            function cambiarColor(){
+                var body=document.body;
+                var colorActual=body.classList.contains("color1")?"color1":"color2";
+                var nuevoColor=colorActual==="color1"?"color2":"color1";
+                body.classList.remove(colorActual);
+                body.classList.add(nuevoColor);
+            }
+        </script>
+        <script>
+            function ocultar() {
+                let holaMundo = document.getElementById("HolaM");
+                holaMundo.classList.add("hidden");
+                }
+        </script>
+        <script>
+             function cambiarTexto() {
+            document.getElementById("boton0").innerHTML = "Mi matricula es: <strong>20223TN062</strong> ";
+         }
+         </script>
+
+    <script>
+        function cambiarAtributo() {
+            document.getElementById("boton1").src = "si.jpg";
+        }
+        function cambiarAtributo() {
+            document.getElementById("boton2").src = "no.jpg";
+        }
+    </script>
+    <script>
+        const boton3 = document.getElementById("boton3");
+        function generarTexto() {
+         let texto = document.getElementById("boton3");
+            texto.innerHTML +=
+         "Este texto no lo genero JATZ lo genero JavaScript" + "<br>";
+            }
+    </script>
+        </script>
+    </body>
+</html> 
