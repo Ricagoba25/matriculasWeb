@@ -1,0 +1,26 @@
+body{
+    transition:background-color 0.5sease;
+}
+.color1{
+    background-color: blanchedalmond;
+}
+.color2{
+    background-color: deeppink;
+}
+html{
+    background-color:#FBD1FE;
+}
+body{
+    background-color:#F08080;
+    color:#000000;
+    margin:auto;
+    
+}
+#contenedor{
+    margin:auto;
+    
+}
+header{
+    float:center;
+    background-color:#FFA07A;
+}
