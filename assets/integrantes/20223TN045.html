@@ -20,8 +20,38 @@
 <p>DSM 3B</p>
 <P> 20223tn045utez.edu.mx</P>
 <p>Mi último grado de estudios es bachilleres y curso la universidad </p>
-<p>Juego Leaguee of Legends y veo anime, normalmente no me gusta salir y me gusta mi trabajo aunque es un poco cansado </p>
-<img src="../imagenes/descargar.jpg" alt="aqui iba una imagen unu"> </center><p>
-    
+<p>Juego League of Legends y veo anime, normalmente no me gusta salir y me gusta mi trabajo aunque es un poco cansado </p>
+<head> <img id="Imagenes" src="../imagenes/chris1.jpg" alt="aqui iba una imagen unu"> 
+   <p>
+    <left><button  id="siguiente">Siguiente Foto</button></left>
+    <rigth><button id="regresar">Regresar Foto</button></rigth>
+    no me salio unu pero lo intentare otra vez si me da chance c:
+  </p> 
+  <script>
+    var Imagenes = ["imagenes/chris2.jpg","imagenes/chris3.jpg","imagenes/chris1.jpg","imagenes/descargar.jpg","imagenes/TOP1.jpg"]
+     var i = 0;
+     var foto = document.getElementById("Imagen");
+     var btnAnterior = document.getElementById("siguiente");
+     var btnSiguiente = document.getElementById("regresar");
+     
+     function cambiarImagen() {
+       foto.src = imagenes[i];
+     }
+     function Siguiente() {
+     i = (i + 1) % imagenes.length;
+     cambiarImagen();
+     }
+     
+     function Anterior() {
+     i = (i - 1 + imagenes.length) % imagenes.length;
+     cambiarImagen();
+     }
+     
+     btnAnterior.addEventListener("click",Anterior);
+     btnSiguiente.addEventListener("click",Siguiente);
+     
+     cambiarImagen(); 
+     </script>
+    </head>
 </body>
 </html>
