@@ -61,7 +61,7 @@
             parameterList = new URLSearchParams(address);
             return parameterList.get(key);
         }
-
+        if(fechanac != null){
         console.log(getParameter("fechanac"));
         var fechanac = getParameter("fechanac");
 
@@ -73,7 +73,10 @@
         var edad = Math.floor(diftiempo/(1000 * 60 * 60 * 24 * 365.25));
 
         document.getElementById("fechanac").innerHTML = "Tu edad es: " + edad;
+        }else{
+            document.getElementById("fechanac").innerHTML = "Tu edad: No ingresaste una fecha de nacimiento";
 
+        }
 
     </script>
     
@@ -127,8 +130,8 @@
     var pass1 = getParameter("password");
     var pass2 = getParameter("repassword");
     
-if(pass1.length < 4){
-    alert("Tu contraseña no cumple con los requisitos, prueba de nuevo")
+if(pass1.length < 5){
+    alert("Tu contraseña no es segura, prueba de nuevo")
 }
 
 if(pass1 != pass2){

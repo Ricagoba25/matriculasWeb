@@ -6,22 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body id="fondomamalon" style="background-color: #A150DF;">
     
-<h1 id="nombre"> Formulario de registro de producto:</h1>
+<h1 id="nombre"> <center> Formulario de registro </center></h1>
+<hr>
+<br>
 <form action="muestra.html" method="get">
-    <label>Nombre/s:  </label><input type="text" name="nombre"><br>
-    <label>Apellido Paterno:  </label><input type="text" name="paterno"><br>
-    <label>Apellido Materno:  </label><input type="text" name="materno"><br>
-    <label>Correo:  </label><input type="email" name="correo"><br>
-    <label>Fecha Nacimiento:  </label><input type="date" name="fechanac"><br>
-    <label>Teléfono:</label><input type="number" name="telefono"><br>
-    <label>Usuario:</label><input type="text" name="usuario"><br>
-    <label>Contraseña:</label><input type="password" name="password" id="pass1"><br>
-    <label>Repetir Contraseña:</label><input type="password" name="repassword" id="pass2"><br>
-    <h6> * La contraseña debe de contener al menos una mayuscula</h6>
-    <h6> * La contraseña debe de contener mas de 8 caracteres</h6>
-    <h6> * La contraseña no debe de contener el nombre</h6>
+        <label >Nombre/s: <abbr title="required" aria-label="required">*</abbr> </label>
+        <br>  
+        <input type="text" name="nombre">
+        <br>
+        <label>Apellido Paterno: <abbr title="required" aria-label="required">*</abbr> </label>
+        <br>
+        <input type="text" name="paterno"><br>
+   
+    
+    <label>Apellido Materno:  </label>
+    <br>
+    <input type="text" name="materno" >
+    <br>
+    <label>Fecha Nacimiento:  </label>
+    <br>
+    <input type="date" name="fechanac">
+    <br>
+    <br>
+    <br>
+    <label>Correo: <abbr title="required" aria-label="required">*</abbr> </label>
+    <br>
+    <input type="email" name="correo">
+    <br>
+    <label>Teléfono:</label>
+    <br>
+    <input type="number" name="telefono">
+    <br>
+    <br>
+    <br>
+    <label>Usuario: <abbr title="required" aria-label="required">*</abbr>
+    <br>
+    </label><input type="text" name="usuario">
+    <br>
+    <label>Contraseña:</label>
+    <br>
+    <input type="password" name="password" id="pass1">
+    <br>
+    <label>Repetir Contraseña:</label>
+    <br>
+    <input type="password" name="repassword" id="pass2">
+    <br>
+    <ul>
+            <li>La contraseña debe de contener al menos una mayuscula</li>
+            <li>La contraseña debe de contener mas de 5 caracteres</li>
+            <li>La contraseña no debe de contener el nombre</li>
+            
+            
+    </ul>    
+    <br>
+    <br>
     <input type="submit" value="Enviar Datos"><br>
 
 
