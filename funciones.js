@@ -1,11 +1,31 @@
+let fotos = ["assets/imagenes/interestelar2.jpg","assets/imagenes/interestelar3.png","assets/imagenes/interestelar4.jpg","assets/imagenes/interestelar5.jpg"]
+
+var indice = 0;
+
+function mostrarimg(){
+element =document.getElementById("interestelar");
+interestelar.src = fotos[indice];
+    
+}
+
 function Cambiar(){
-    element =document.getElementById("interestelar");
-    element.src="assets/imagenes/interestelar2.jpg";
+if (indice < fotos.length - 1){
+indice++;
+}else{
+indice - 0;
+}
+mostrarimg();
+
 }
 
 function Regresar(){
-    element =document.getElementById("interestelar");
-    element.src="assets/imagenes/interestelar.jpg";
+    if (indice < fotos.length + 1){
+        indice--;
+    }else{
+        indice + 0;
+    }
+    mostrarimg();
+
 }
 
 

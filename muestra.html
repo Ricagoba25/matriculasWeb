@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h1 id="mensaje"></h1>
+
+    <script>
+        getParameter = (key) =>{
+            address = window.location.search;
+            parameterList = new URLSearchParams(address);
+            return parameterList.get(key);
+        }
+    console.log(getParameter("nombre"));
+    var nombre = getParameter("nombre");
+    if(nombre!=null){
+    document.getElementById("mensaje").innerHTML = nombre;
+    
+    }
+    
+    </script>
+
+
+<script>
+    getParameter = (key) =>{
+        address = window.location.search;
+        parameterList = new URLSearchParams(address);
+        return parameterList.get(key);
+    }
+console.log(getParameter("password"));
+var pass1 = getParameter("password");
+
+console.log(getParameter("repassword"));
+var pass2 = getParameter("repassword");
+    
+if(pass1.length < 8){
+    alert("Tu contraseña no cumple con los requisitos, prueba de nuevo")
+}
+
+if(pass1 != pass2){
+    alert("Las contraseñas no coinciden")
+}
+
+</script>
+
+
+
+</body>
+</html>
