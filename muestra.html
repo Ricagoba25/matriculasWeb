@@ -8,7 +8,75 @@
 </head>
 <body>
    
-    <h1 id="mensaje"></h1>
+    <h1 id="Nombre"></h1>
+    <h2 id="Paterno"></h2>
+    <h2 id="Materno"></h2>
+    <h2> <a id = "correo" href="mailto: correo"></a></h2>
+    <h2> <a id = "telefono" href="tel: telefono"></a></h2>
+    <h2 id="telefono"></h2>
+    <h2 id="fechanac"></h2>
+
+
+    <script>
+      getParameter = (key) =>{
+        address = window.location.search;
+        parameterList = new URLSearchParams(address);
+        return parameterList.get(key);
+      }  
+
+      console.log(getParameter("correo"));
+
+      var correo = getParameter("correo");
+
+      if (correo !=null){
+       document.getElementById("correo").innerHTML = "Correo: " + correo;
+
+      }
+
+
+    </script>
+
+<script>
+    getParameter = (key) =>{
+      address = window.location.search;
+      parameterList = new URLSearchParams(address);
+      return parameterList.get(key);
+    }  
+
+    console.log(getParameter("telefono"));
+
+    var telefono = getParameter("telefono");
+
+    if (telefono !=null){
+     document.getElementById("telefono").innerHTML = "Telefono: " + telefono; 
+
+    }
+
+
+  </script>
+
+    <script>
+        getParameter = (key) =>{
+            address = window.location.search;
+            parameterList = new URLSearchParams(address);
+            return parameterList.get(key);
+        }
+
+        console.log(getParameter("fechanac"));
+        var fechanac = getParameter("fechanac");
+
+        var fechanacobj = new Date(fechanac);
+        var fechaact = new date();
+
+        var diftiempo = fechaact.getTime() - fechanacobj.getTime();
+
+        var edad = Math.floor(diftiempo/(1000 * 60 * 60 * 24 * 365.25));
+
+        document.getElementById("fechanac").innerHTML = "Tu edad es: " + edad;
+
+
+    </script>
+    
 
     <script>
         getParameter = (key) =>{
@@ -17,13 +85,32 @@
             return parameterList.get(key);
         }
     console.log(getParameter("nombre"));
+    console.log(getParameter("paterno"));
+    console.log(getParameter("materno"));
+    
     var nombre = getParameter("nombre");
+    var paterno = getParameter("paterno");
+    var materno = getParameter("materno");
+
+
+
     if(nombre!=null){
-    document.getElementById("mensaje").innerHTML = nombre;
+    document.getElementById("Nombre").innerHTML = "Nombre: " + nombre;
     
     }
+
+    if(paterno != null){
+        document.getElementById("Paterno").innerHTML = "A Paterno: " + paterno;
+    }
+    if(materno != null){
+        document.getElementById("Materno").innerHTML = "A Materno: " + materno;
+    }
+   
+
     
     </script>
+
+
 
 
 <script>
@@ -32,11 +119,13 @@
         parameterList = new URLSearchParams(address);
         return parameterList.get(key);
     }
-console.log(getParameter("password"));
-var pass1 = getParameter("password");
+    console.log(getParameter("nombre"));
+    console.log(getParameter("password"));
+    console.log(getParameter("repassword"));
 
-console.log(getParameter("repassword"));
-var pass2 = getParameter("repassword");
+    var nombre = getParameter("nombre");
+    var pass1 = getParameter("password");
+    var pass2 = getParameter("repassword");
     
 if(pass1.length < 8){
     alert("Tu contraseña no cumple con los requisitos, prueba de nuevo")
@@ -46,9 +135,17 @@ if(pass1 != pass2){
     alert("Las contraseñas no coinciden")
 }
 
+if(pass1 = nombre){
+    alert("La contraseña no debe de contener tu nombre")
+}
+
 </script>
 
 
 
+
 </body>
+
+
+
 </html>
