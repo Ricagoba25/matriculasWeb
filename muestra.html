@@ -66,7 +66,7 @@
         var fechanac = getParameter("fechanac");
 
         var fechanacobj = new Date(fechanac);
-        var fechaact = new date();
+        var fechaact = new Date();
 
         var diftiempo = fechaact.getTime() - fechanacobj.getTime();
 
@@ -127,7 +127,7 @@
     var pass1 = getParameter("password");
     var pass2 = getParameter("repassword");
     
-if(pass1.length < 8){
+if(pass1.length < 4){
     alert("Tu contraseña no cumple con los requisitos, prueba de nuevo")
 }
 
@@ -135,7 +135,7 @@ if(pass1 != pass2){
     alert("Las contraseñas no coinciden")
 }
 
-if(pass1 = nombre){
+if(pass1 == nombre){
     alert("La contraseña no debe de contener tu nombre")
 }
 
