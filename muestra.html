@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: #A150DF;">
    
     <h1 id="Nombre"></h1>
     <h2 id="Paterno"></h2>
@@ -61,22 +61,18 @@
             parameterList = new URLSearchParams(address);
             return parameterList.get(key);
         }
-        if(fechanac != null){
+        
         console.log(getParameter("fechanac"));
         var fechanac = getParameter("fechanac");
-
+        
         var fechanacobj = new Date(fechanac);
         var fechaact = new Date();
 
         var diftiempo = fechaact.getTime() - fechanacobj.getTime();
 
         var edad = Math.floor(diftiempo/(1000 * 60 * 60 * 24 * 365.25));
-
+  
         document.getElementById("fechanac").innerHTML = "Tu edad es: " + edad;
-        }else{
-            document.getElementById("fechanac").innerHTML = "Tu edad: No ingresaste una fecha de nacimiento";
-
-        }
 
     </script>
     
