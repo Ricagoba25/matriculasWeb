@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi página bonita</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+  <header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="img/Imagen1.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Mi empresa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="inicio.html">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="#">Tablas</a>
+          <a class="nav-link" href="https://facebook.com">Facebook</a>
+          <a class="nav-link disabled">Deshabilitado</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+  <div class="container">
+    <div class="row">
+      <!--Aqui hare mi formulario-->
+      <div class="col col-md-4">
+        <br><br>
+        <h1>
+          <center>Nueva mercancia</center>
+        </h1>
+        <form action="#" method="get">
+          <div class="mb-3">
+            <label for="nombreVoluntario" class="form-label">Nombres</label>
+            <input type="text" class="form-control" name="nombreVoluntario" id="nombreVoluntario" aria-describedby="ayudaVoluntario">
+            <div id="ayudaMerca" class="form-text">Aqui va tu nombrey/onombres mi voluntario c: </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="apellido1Voluntario" class="form-label">Apellido 1</label>
+            <input type="text" class="form-control" name="apellido1Voluntario" id="apellido1Voluntario" aria-describedby="ayudaVoluntario">
+            <div id="ayudaVoluntario" class="form-text">Aqui va tu Apellido Paterno.</div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="apellido2Voluntario" class="form-label">Apellido 2</label>
+            <input type="text" class="form-control" name="apellido2Voluntario" id="apellido2Voluntario" aria-describedby="ayudaVoluntario">
+            <div id="ayudaVoluntario" class="form-text">Aqui va tu Apellido Materno.</div>
+          </div>
+<br>
+          <label for="sexoVoluntario" class="form-label">Selecciona el sexo</label>
+          <select class="form-select" name="Sexo" aria-label="Default select example">
+            <option selected>Selecciona Sexo</option>
+            <option value="H">Hombre</option>
+            <option value="M">Mujer</option>
+          </select>
+<br><br>
+          <div class="mb-3">
+            <label for="curpVoluntario" class="form-label">CURP</label>
+            <input type="text" class="form-control" name="curpVoluntario" id="curpVoluntario" aria-describedby="ayudaVoluntario">
+            <div id="ayudaVoluntario" class="form-text">Aqui va tu CURP mi friend</div>
+          </div>
+          <div class="mb-3">
+            <label for="telefonoVoluntario" class="form-label">Telefono</label>
+            <input type="number" class="form-control" name="telefonoVoluntario" id="telefonoVoluntario" aria-describedby="ayudaVoluntario">
+            <div id="ayudaVoluntario" class="form-text">Aqui va tu CURP mi friend</div>
+          </div>
+          <div class="mb-3">
+            <label for="correoVoluntario" class="form-label">Correo</label>
+            <input type="email" class="form-control" name="correoVoluntario" id="correoVoluntario" aria-describedby="ayudaVoluntario">
+            <div id="ayudaVoluntario" class="form-text">Aqui va tu correo personal c:</div>
+          </div>
+
+          
+
+
+
+
+
+          <div class="mb-3">
+            <label for="numeroMerca" class="form-label">Merca</label>
+            <input type="number" class="form-control" name="numeroMerca" id="numeroMerca"
+              aria-describedby="ayudaNMerca">
+            <div id="ayudaNMerca" class="form-text">Aqui va la cantidad del producto nuevo.</div>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" name="importado" id="importado">
+            <label class="form-check-label" for="importado">Es importado?</label>
+          </div>
+          <button id="registro" type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+      </div>
+      <!--Aqui hare mi tabla-->
+      <div class="col col-md-8">
+        <br><br>
+        <h1>
+          <center>Registro de mercancia</center>
+        </h1>
+        <table class="table table-striped table-hover" id="tabla">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombres</th>
+              <th scope="col">Apellido1</th>
+              <th scope="col">Apellido2</th>
+              <th scope="col">CURP</th>
+              <th scope="col">Teléfono</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Sexo</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpoTabla">
+            <tr>
+              <th scope="row">1</th>
+              <td>Uriel</td>
+              <td>Gómez</td>
+              <td>Soriano</td>
+              <td>GOSU02332FDJFH23</td>
+              <td>7772737845</td>
+              <td>uri.gosu@gmail.com</td>
+              <td>H</td>
+              <td><a onclick="eliminar(this);">Eliminar</a></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Janeth</td>
+              <td>Hernandez</td>
+              <td>Victoriano</td>
+              <td>JANE476HJDJ4343</td>
+              <td>7772754657</td>
+              <td>jan.vic@gmail.com</td>
+              <td>M</td>
+              <td><a onclick="eliminar(this);">Eliminar</a></td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script>
+    getParameter = (key) => {
+      address = window.location.search; // url de la ventana actual
+      // Objeto de tipo URLSearchParams
+      parameterList = new URLSearchParams(address);
+      // Regresa el valor del parámetro “key”
+      return parameterList.get(key);
+    }
+
+    function registrarProducto() {
+
+      /*Obtener los anteriores
+      var datos = document.getElementsByTagName("table")[0].rows;
+      var data = {}
+      Array.from(datos).forEach(element => {
+        console.log(element.innerHTML);
+      });*/
+
+      var nombreMerca = getParameter("nombreMerca");
+      var numeroMerca = getParameter("numeroMerca");
+      var importado = getParameter("importado") == "on";
+      i = 4;
+
+      if (nombreMerca != null && numeroMerca != null) {
+        if (nombreMerca != "" && numeroMerca != "") {
+          //alert("Se registro un numevo articulo");
+          tabla = document.getElementById("cuerpoTabla");
+          nuevoRegistro = document.createElement("tr");
+
+          id = document.createElement("th");
+          id.innerHTML = i;
+          id.scope = "row";
+
+          nombre = document.createElement("td");
+          nombre.innerHTML = nombreMerca;
+
+          numero = document.createElement("td");
+          numero.innerHTML = numeroMerca;
+
+          importa = document.createElement("td");
+          if (importado) {
+            importa.innerHTML = "Si";
+          } else {
+            importa.innerHTML = "No";
+          }
+
+          elimina = document.createElement("td");
+          accion = document.createElement("a");
+          accion.innerHTML = "Eliminar";
+          accion.addEventListener("click", () => { eliminar(accion); });
+          elimina.appendChild(accion);
+
+          nuevoRegistro.appendChild(id);
+          nuevoRegistro.appendChild(nombre);
+          nuevoRegistro.appendChild(numero);
+          nuevoRegistro.appendChild(importa);
+          nuevoRegistro.appendChild(elimina)
+          tabla.appendChild(nuevoRegistro)
+        }
+      }
+
+    }
+ 
+    window.addEventListener("load", registrarProducto);
+
+    function eliminar(element) {
+      element.parentElement.parentElement.remove();
+    }
+  </script>
+  <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
