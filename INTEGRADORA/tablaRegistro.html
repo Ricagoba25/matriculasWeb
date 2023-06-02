@@ -12,8 +12,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="img/Imagen1.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-        Mi empresa
+        <H1><img src="img/LOGO_SIGEV.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top"> SIGEV </H1> 
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,8 +35,9 @@
       <div class="col col-md-4">
         <br><br>
         <h1>
-          <center>Nueva mercancia</center>
+          <center>Nuevo Voluntario</center>
         </h1>
+
         <form action="#" method="get">
           <div class="mb-3">
             <label for="nombreVoluntario" class="form-label">Nombres</label>
@@ -57,54 +57,48 @@
             <div id="ayudaVoluntario" class="form-text">Aqui va tu Apellido Materno.</div>
           </div>
 <br>
+  <div class="mb-3">
           <label for="sexoVoluntario" class="form-label">Selecciona el sexo</label>
-          <select class="form-select" name="Sexo" aria-label="Default select example">
+          <select class="form-select" name="SexoVoluntario" id="SexoVoluntario" aria-label="Default select example">
             <option selected>Selecciona Sexo</option>
             <option value="H">Hombre</option>
             <option value="M">Mujer</option>
           </select>
+        
+        </div>
 <br><br>
           <div class="mb-3">
             <label for="curpVoluntario" class="form-label">CURP</label>
             <input type="text" class="form-control" name="curpVoluntario" id="curpVoluntario" aria-describedby="ayudaVoluntario">
             <div id="ayudaVoluntario" class="form-text">Aqui va tu CURP mi friend</div>
           </div>
+
           <div class="mb-3">
             <label for="telefonoVoluntario" class="form-label">Telefono</label>
             <input type="number" class="form-control" name="telefonoVoluntario" id="telefonoVoluntario" aria-describedby="ayudaVoluntario">
             <div id="ayudaVoluntario" class="form-text">Aqui va tu CURP mi friend</div>
           </div>
+
           <div class="mb-3">
             <label for="correoVoluntario" class="form-label">Correo</label>
             <input type="email" class="form-control" name="correoVoluntario" id="correoVoluntario" aria-describedby="ayudaVoluntario">
             <div id="ayudaVoluntario" class="form-text">Aqui va tu correo personal c:</div>
           </div>
 
+
           
-
-
-
-
-
-          <div class="mb-3">
-            <label for="numeroMerca" class="form-label">Merca</label>
-            <input type="number" class="form-control" name="numeroMerca" id="numeroMerca"
-              aria-describedby="ayudaNMerca">
-            <div id="ayudaNMerca" class="form-text">Aqui va la cantidad del producto nuevo.</div>
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" name="importado" id="importado">
-            <label class="form-check-label" for="importado">Es importado?</label>
-          </div>
           <button id="registro" type="submit" class="btn btn-primary">Registrar</button>
+
+
         </form>
       </div>
       <!--Aqui hare mi tabla-->
       <div class="col col-md-8">
         <br><br>
         <h1>
-          <center>Registro de mercancia</center>
+          <center>Registros De Voluntarios</center>
         </h1>
+        <br>
         <table class="table table-striped table-hover" id="tabla">
           <thead>
             <tr>
@@ -112,10 +106,10 @@
               <th scope="col">Nombres</th>
               <th scope="col">Apellido1</th>
               <th scope="col">Apellido2</th>
+              <th scope="col">Sexo</th>
               <th scope="col">CURP</th>
               <th scope="col">Teléfono</th>
               <th scope="col">Correo</th>
-              <th scope="col">Sexo</th>
             </tr>
           </thead>
           <tbody id="cuerpoTabla">
@@ -124,10 +118,10 @@
               <td>Uriel</td>
               <td>Gómez</td>
               <td>Soriano</td>
+              <td>H</td>
               <td>GOSU02332FDJFH23</td>
               <td>7772737845</td>
               <td>uri.gosu@gmail.com</td>
-              <td>H</td>
               <td><a onclick="eliminar(this);">Eliminar</a></td>
             </tr>
             <tr>
@@ -135,10 +129,11 @@
               <td>Janeth</td>
               <td>Hernandez</td>
               <td>Victoriano</td>
+              <td>M</td>
               <td>JANE476HJDJ4343</td>
               <td>7772754657</td>
               <td>jan.vic@gmail.com</td>
-              <td>M</td>
+              
               <td><a onclick="eliminar(this);">Eliminar</a></td>
             </tr>
            
@@ -165,49 +160,78 @@
         console.log(element.innerHTML);
       });*/
 
-      var nombreMerca = getParameter("nombreMerca");
-      var numeroMerca = getParameter("numeroMerca");
-      var importado = getParameter("importado") == "on";
-      i = 4;
+      var nombreVoluntario = getParameter("nombreVoluntario");
+      var apellido1Voluntario = getParameter("apellido1Voluntario");
+      var apellido2Voluntario = getParameter("apellido2Voluntario");
+      var SexoVoluntario = getParameter("SexoVoluntario");
+      var curpVoluntario = getParameter("curpVoluntario");
+      var telefonoVoluntario = getParameter("telefonoVoluntario");
+      var correoVoluntario = getParameter("correoVoluntario");
+     
+    i = 2
 
-      if (nombreMerca != null && numeroMerca != null) {
-        if (nombreMerca != "" && numeroMerca != "") {
+
+
+      if (nombreVoluntario != null && apellido1Voluntario  != null &&  apellido2Voluntario != null  
+        && curpVoluntario!= null && telefonoVoluntario!= null && correoVoluntario!= null) {
+
+        if (nombreVoluntario != "" && apellido1Voluntario  != "" &&  apellido2Voluntario != "" 
+        && curpVoluntario!= "" && telefonoVoluntario!= "" && correoVoluntario!= "") {
+
           //alert("Se registro un numevo articulo");
           tabla = document.getElementById("cuerpoTabla");
           nuevoRegistro = document.createElement("tr");
 
           id = document.createElement("th");
-          id.innerHTML = i;
+          id.innerHTML = i +1;
           id.scope = "row";
 
           nombre = document.createElement("td");
-          nombre.innerHTML = nombreMerca;
+          nombre.innerHTML = nombreVoluntario;
+          
+          apellido1 = document.createElement("td");
+          apellido1.innerHTML = apellido1Voluntario;
+          
+          apellido2 = document.createElement("td");
+          apellido2.innerHTML = apellido2Voluntario;
+          
+          Sexo = document.createElement("td");
+          Sexo.innerHTML = SexoVoluntario
+          
+          curp = document.createElement("td");
+          curp.innerHTML = curpVoluntario;
+         
+          telefono = document.createElement("td");
+          telefono.innerHTML = telefonoVoluntario;
+          
+          correo = document.createElement("td");
+          correo.innerHTML = correoVoluntario;
 
-          numero = document.createElement("td");
-          numero.innerHTML = numeroMerca;
+        
 
-          importa = document.createElement("td");
-          if (importado) {
-            importa.innerHTML = "Si";
-          } else {
-            importa.innerHTML = "No";
-          }
-
+           
+//ACCION DE ELIMINAR
           elimina = document.createElement("td");
           accion = document.createElement("a");
           accion.innerHTML = "Eliminar";
           accion.addEventListener("click", () => { eliminar(accion); });
           elimina.appendChild(accion);
 
+
           nuevoRegistro.appendChild(id);
           nuevoRegistro.appendChild(nombre);
-          nuevoRegistro.appendChild(numero);
-          nuevoRegistro.appendChild(importa);
+          nuevoRegistro.appendChild(apellido1);
+          nuevoRegistro.appendChild(apellido2);
+          nuevoRegistro.appendChild(Sexo)
+          nuevoRegistro.appendChild(curp)
+          nuevoRegistro.appendChild(telefono)
+          nuevoRegistro.appendChild(correo)
+          
           nuevoRegistro.appendChild(elimina)
           tabla.appendChild(nuevoRegistro)
         }
       }
-
+    
     }
  
     window.addEventListener("load", registrarProducto);
