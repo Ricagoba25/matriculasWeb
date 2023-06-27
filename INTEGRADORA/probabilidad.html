@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>INTEGRADORA DE PROBABILIDAD</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        .calculadora{
+            background-color: #FF594C;
+        }
+        .datos{
+            background-color: #FFD54C;
+        }
+        nav{
+            background-color: #FFD54C;
+        }
+        button{
+            background-color:#A6ED2D;
+        }
+    </style>
+    <body class="calculadora">
+        <nav>
+            <br>
+             <center><h1>CALCULADORA DE ESTADISTICA</h1></center>
+        </nav>
+        <br>
+        <nav class="datos">
+            <label for="valores">INGRESA LOS VALORES EN COMAS :</label>
+            <input type="text" id="valores">
+            <button onclick="calcularEstadisticas()">CALCULAR</button>  
+    <br>
+        <h2>RESULTADOS :</h2>
+        <p id="media"></p>
+        <p id="desviacion"></p>
+        <script>
+            function calcularEstadisticas() {
+            // Obtener los valores ingresados por el usuario
+            var valores = document.getElementById("valores").value;
+            var arregloValores = valores.split(",");
+            
+            // Calcular la media
+            var suma = 0;
+            for (var i = 0; i < arregloValores.length; i++) {
+                suma += parseInt(arregloValores[i]);
+            }
+            var media = suma / arregloValores.length;
+            
+            // Calcular la desviación estándar
+            var sumaCuadrados = 0;
+            for (var i = 0; i < arregloValores.length; i++) {
+                var diferencia = parseInt(arregloValores[i]) - media;
+                sumaCuadrados += diferencia * diferencia;
+            }
+            var desviacion = Math.sqrt(sumaCuadrados / arregloValores.length);
+            
+            // Mostrar los resultados en la página
+            document.getElementById("media").innerHTML = "Media: " + media.toFixed(2);
+            document.getElementById("desviacion").innerHTML = "Desviación estándar: " + desviacion.toFixed(2);
+            }
+        </script>
+     </nav>
+    </head>
+    
+    </body>
+</html>
